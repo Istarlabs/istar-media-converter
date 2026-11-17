@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2026 Pascal Klose
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.dependencies]
+media-core = { path = "crates/media-core" }
+
+anyhow = "1.0.104"
+chrono = { version = "0.4.45", default-features = false, features = ["clock", "std"] }
+clap = { version = "4.6.7", features = ["derive"] }
+
+# gettext-system: link the implementation glibc already carries. Without that feature the crate
+# builds and statically links its own GNU gettext, which is LGPL and would pull its terms onto this
+# binary for something the C library is already holding.
+gettext-rs = { version = "0.8.0", features = ["gettext-system"] }
+serde = { version = "1.0.229", features = ["derive"] }
+
+# Reading only: the menu script writes the file, so the display half has nothing to do here.
+toml = { version = "1.1.6", default-features = false, features = ["std", "serde", "parse", "display"] }
+zbus = "5.19.0"
+
+[profile.release]
+opt-level = 2
+strip = true
+lto = true
+codegen-units = 1

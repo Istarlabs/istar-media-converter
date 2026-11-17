@@ -1,0 +1,29 @@
+mime = ["video/*"]
+submenu = { en = "Video Converter", de = "Video-Konverter" }
+
+[[action]]
+id = "convertToAv1"
+name = { en = "Convert to AV1", de = "Zu AV1 konvertieren" }
+icon = "video-x-generic"
+exec = "{bin}/av1-convert --notify %F"
+
+[[action]]
+id = "convertToAv1Custom"
+name = { en = "Convert to AV1 (custom settings)", de = "Zu AV1 konvertieren (benutzerdefiniert)" }
+icon = "configure"
+exec = "{bin}/av1-convert --ask --notify %F"
+
+[[action]]
+id = "analyzeForAv1"
+name = { en = "Show AV1 settings (analyze only)", de = "AV1-Einstellungen anzeigen (nur Analyse)" }
+icon = "dialog-information"
+exec = "konsole --hold -e {bin}/av1-convert --analyze-only %F"
+
+[[action]]
+separator = true
+
+[[action]]
+id = "editAv1Defaults"
+name = { en = "Default settings…", de = "Standardeinstellungen…" }
+icon = "document-edit"
+exec = "{bin}/av1-convert --configure"

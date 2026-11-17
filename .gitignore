@@ -1,0 +1,13 @@
+# Rust build artifacts
+/target
+
+# Backup files rustfmt may leave behind
+**/*.rs.bk
+
+# Python bytecode from the scripts
+__pycache__/
+.commit-msg
+.pr-body.md
+
+# JetBrains project settings
+.idea/

@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Pascal Klose
+# This file is distributed under the same license as the av1-convert package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: av1-convert\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 19:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: crates/av1-convert/src/analyze.rs:302
+msgid "cropdetect produced no usable measurement"
+msgstr ""
+
+#: crates/av1-convert/src/analyze.rs:304
+msgid "the sampled crop rectangles disagree"
+msgstr ""
+
+#: crates/av1-convert/src/analyze.rs:306
+msgid "the crop rectangle is not even on all sides"
+msgstr ""
+
+#: crates/av1-convert/src/analyze.rs:308
+msgid "there is nothing worth cropping"
+msgstr ""
+
+#: crates/av1-convert/src/analyze.rs:375
+msgid "idet reported nothing, assuming progressive"
+msgstr ""
+
+#: crates/av1-convert/src/analyze.rs:387
+#, rust-format
+msgid "repeated fields at {rate} fps: telecine outside NTSC is not handled"
+msgstr ""
+
+#: crates/av1-convert/src/analyze.rs:403
+#, rust-format
+msgid "no crop: {reason} ({share} % of {count} measurements)"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:63 crates/av1-convert/src/main.rs:280
+msgid "Quality, lower is better"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:68 crates/av1-convert/src/main.rs:286
+msgid "Transcode the audio to Opus, 256 kb/s"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:73 crates/av1-convert/src/main.rs:292
+msgid "Encode 10 bit instead of 8"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:78
+msgid "Crop even with subtitles (they then sit misplaced)"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:83
+msgid "Audio tracks (deu,eng or all)"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:88
+msgid "Subtitles (auto, all, none or deu,eng)"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:133
+msgid "AV1 default settings"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:134
+msgid "What av1-convert encodes with when nothing else is given:"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:168
+#, rust-format
+msgid "The config file cannot be read and stays unchanged - {reason}"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:183
+#, rust-format
+msgid "Saved: {path}"
+msgstr ""
+
+#: crates/av1-convert/src/defaults.rs:195
+#, rust-format
+msgid "Nothing saved, the settings window failed - {reason}"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:66
+msgid "AV1 conversion"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:104
+msgid "AV1 conversion interrupted"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:105
+msgid "The partial file was removed, the source is untouched."
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:126
+#, rust-format
+msgid "Nothing converted, the settings window failed - {reason}"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:140 crates/av1-convert/src/main.rs:330
+msgid "Convert to AV1"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:153
+#, rust-format
+msgid "The config file was ignored, the built-in defaults apply - {reason}"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:172
+#, rust-format
+msgid "{file}: failed - {reason}"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:207
+#, rust-format
+msgid "{count} file"
+msgid_plural "{count} files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: crates/av1-convert/src/main.rs:217
+#, rust-format
+msgid "{count} file done"
+msgid_plural "{count} files done"
+msgstr[0] ""
+msgstr[1] ""
+
+#: crates/av1-convert/src/main.rs:224
+#, rust-format
+msgid "{failed} of {count} file failed"
+msgid_plural "{failed} of {count} files failed"
+msgstr[0] ""
+msgstr[1] ""
+
+#: crates/av1-convert/src/main.rs:251
+msgid "DVD film"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:252
+msgid "Camera or noisy footage"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:253
+msgid "Archive"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:254
+msgid "Save space"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:255
+msgid "Custom"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:272
+msgid "Preset"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:331
+msgid "How should it be encoded?"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:353
+msgid "there is no video stream"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:363
+msgid "it is already AV1"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:379
+#, rust-format
+msgid ""
+"every audio track kept: none of them is {langs}, and a file without audio "
+"would be worse than a large one"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:394
+#, rust-format
+msgid ""
+"cropped anyway: the {count} subtitle stream(s) will sit misplaced, their "
+"bitmaps belong to the uncropped frame"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:404
+#, rust-format
+msgid ""
+"no crop: {count} subtitle stream(s) are kept, and their bitmaps are placed "
+"in the uncropped frame"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:419
+#, rust-format
+msgid "{file}: {warning}"
+msgstr ""
+
+#. i18n: {plan} is the technical line the log carries too - "deinterlace, crop 704x448, cq 28"
+#: crates/av1-convert/src/main.rs:511
+#, rust-format
+msgid "{file}: converting - {plan}"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:549
+#, rust-format
+msgid "{file}: cancelled, the partial file was removed"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:555
+msgid "Cancelled"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:572
+#, rust-format
+msgid "{file}: the AV1 file is larger than the source, both were kept"
+msgstr ""
+
+#. i18n: {change} reads "4.27 GiB -> 1.23 GiB (-71 %)"
+#: crates/av1-convert/src/main.rs:585
+#, rust-format
+msgid "{file}: done, {change}"
+msgstr ""
+
+#: crates/av1-convert/src/main.rs:613
+#, rust-format
+msgid "{file}: skipped, {reason}"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:303
+msgid "no crop"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:307
+msgid "no deinterlace"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:308
+msgid "deinterlace"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:309
+msgid "inverse telecine"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:313
+msgid "audio copied"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:314
+msgid "audio to Opus"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:322
+#, rust-format
+msgid "{count} of them"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:329
+msgid "subtitles copied"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:330
+msgid "no subtitles"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:334
+#, rust-format
+msgid "{count} subtitle track(s)"
+msgstr ""
+
+#: crates/av1-convert/src/plan.rs:341
+msgid "10 bit"
+msgstr ""
+
+#: crates/image-to-pdf/src/main.rs:53 crates/image-to-pdf/src/main.rs:153
+msgid "Image to PDF"
+msgstr ""
+
+#: crates/image-to-pdf/src/main.rs:66
+#, rust-format
+msgid "Created: {path}"
+msgstr ""
+
+#: crates/image-to-pdf/src/main.rs:82
+#, rust-format
+msgid "Nothing created - {reason}"
+msgstr ""
+
+#: crates/image-to-pdf/src/main.rs:151
+msgid "File name"
+msgstr ""
+
+#: crates/image-to-pdf/src/main.rs:154
+msgid "Name of the PDF:"
+msgstr ""

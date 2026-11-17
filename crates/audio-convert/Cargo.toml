@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2026 SavageCore
+# SPDX-FileCopyrightText: 2026 Pascal Klose
+# SPDX-License-Identifier: MIT
+
+[package]
+name = "audio-convert"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Convert or extract audio with ffmpeg from Dolphin's context menu"
+license = "MIT"
+publish = false
+
+# The service menu and scripts call the binary by this name.
+[[bin]]
+name = "istar-audio-converter"
+path = "src/main.rs"
+
+[dependencies]
+media-core.workspace = true
+
+clap.workspace = true
+dirs = "6.0.0"
+tempfile = "3.27.0"
+which = "8.0.5"
+zbus.workspace = true

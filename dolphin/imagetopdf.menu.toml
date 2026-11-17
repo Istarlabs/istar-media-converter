@@ -1,0 +1,12 @@
+mime = ["image/*"]
+submenu = { en = "Image To PDF", de = "Bild zu PDF" }
+
+[[action]]
+id = "ImageToPdf"
+name = { en = "Convert to PDF", de = "Zu PDF konvertieren" }
+exec = "{bin}/image-to-pdf single %f"
+
+[[action]]
+id = "ImagesToPdf"
+name = { en = "Convert all to single PDF", de = "Konvertiere alle Bilder in ein PDF" }
+exec = "{bin}/image-to-pdf multi %F"

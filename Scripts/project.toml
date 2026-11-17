@@ -1,0 +1,54 @@
+# What this project differs by. The scripts themselves live in devscripts (https://github.com/Istarlabs/devscripts);
+# Scripts/*.py here are shims: DEVSCRIPTS, else ~/dev/tools/devscripts, else the .devscripts submodule.
+name = "av1-convert"
+env_prefix = "AV1_CONVERT"
+
+[rust]
+binary = "av1-convert"
+package_path = "crates/av1-convert"
+
+# ~/.local rather than cargo's default ~/.cargo/bin: a Dolphin session does not reliably carry that
+# in PATH, and the service menu calls the binary by absolute path.
+install_root = "~/.local"
+
+# Opt-in. `install` writes <name>.desktop for each <name>.menu.toml listed here (the format is in
+# devscripts' servicemenu.py), so no finished .desktop file is kept anywhere - a second copy is how a fix
+# ends up surviving only in the installed one.
+[rust.service_menu]
+definitions = ["dolphin/av1-convert.menu.toml", "dolphin/imagetopdf.menu.toml"]
+directory = "~/.local/share/kio/servicemenus"
+
+# The audio menu shows the configured quality in its names, which only its binary knows, so the
+# binary writes it. Needs `install -p audio-convert` to have put the binary in {bin}.
+generators = ["cargo run -q --release -p audio-convert -- --install-menu {bin}"]
+
+# The dialogs are translated through gettext, the way kurodlg is; the log file stays English.
+# `flavour = "rust"` is what makes i18n.py read .rs instead of C++ sources.
+# python3 Scripts/rpm.py publish: the whole workspace as one package for an RPM repository (see rpm.py's
+# docstring). packaging/rpm-stage.sh lays out the binaries, the Dolphin menus and the translations.
+[rpm]
+name = "istar-media-converter"
+summary = "Dolphin service menus that convert media: video to AV1, audio formats, images to PDF"
+description = "Converters for Dolphin's context menu: video to AV1 on the GPU with deinterlacing and cropping decided by analysis, audio to MP3, OGG, FLAC, WAV, M4A, Opus or ALAC, and images to PDF."
+license = "GPL-3.0-or-later AND MIT"
+url = "https://github.com/Istarlabs/istar-media-converter"
+version_file = "crates/av1-convert/Cargo.toml"
+build = ["cargo build --release --workspace --locked", "sh packaging/rpm-stage.sh {stage}"]
+# The programs the converters run; file paths, so either ffmpeg build (Fedora's or RPM Fusion's) will do.
+# AV1 needs an ffmpeg with av1_nvenc and an NVIDIA GPU, which a package cannot ask for.
+requires = ["/usr/bin/ffmpeg", "/usr/bin/ffprobe", "/usr/bin/magick", "/usr/bin/kdialog", "/usr/bin/notify-send"]
+# kurodlg: the progress window and the --ask form; konsole: the analyze-only entry.
+recommends = ["kurodlg", "konsole"]
+
+[i18n]
+domain = "av1-convert"
+languages = ["de"]
+flavour = "rust"
+sources = ["crates"]
+
+[spdx]
+holder = "Pascal Klose"
+licence = "GPL-3.0-or-later"
+
+[repo]
+main_branch = "master"

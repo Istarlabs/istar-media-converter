@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 Pascal Klose
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[package]
+name = "av1-convert"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Analyze a video with ffprobe/ffmpeg and encode it to AV1 with NVENC, from Dolphin's context menu"
+license = "GPL-3.0-or-later"
+publish = false
+
+[dependencies]
+media-core.workspace = true
+
+anyhow.workspace = true
+clap.workspace = true
+ctrlc = "3.5.2"
+gettext-rs.workspace = true
+serde.workspace = true
+serde_json = "1.0.145"
