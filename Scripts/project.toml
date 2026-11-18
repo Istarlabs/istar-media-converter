@@ -52,3 +52,40 @@ licence = "GPL-3.0-or-later"
 
 [repo]
 main_branch = "master"
+
+# Created by `repo.py init` and `repo.py labels`, next to the shared ones.
+
+[[repo.labels]]
+name = "area:audio"
+color = "0e8a16"
+description = "Audio conversion"
+
+[[repo.labels]]
+name = "area:video"
+color = "1d76db"
+description = "Video conversion (AV1)"
+
+[[repo.labels]]
+name = "area:image"
+color = "5319e7"
+description = "Image to PDF"
+
+[[repo.labels]]
+name = "area:core"
+color = "c5def5"
+description = "Shared media code"
+
+[[repo.labels]]
+name = "area:dolphin"
+color = "d4c5f9"
+description = "The Dolphin integration"
+
+[[repo.labels]]
+name = "packaging"
+color = "fbca04"
+description = "Packages and installation"
+
+[[repo.labels]]
+name = "i18n"
+color = "bfdadc"
+description = "Translations and localization"
